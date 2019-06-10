@@ -160,3 +160,9 @@ sys	0m0.008s
 
 Press ENTER or type command to continue
 ```
+## 内部装饰器
+除了我们自定义的装饰器，python还有如下内部装饰器：
+
+* @staticmethod: 类的静态方法，根成员方法的区别是没有self参数，并且可以在类不能进行实例化的情况下调用
+* @classmethod: 跟成员方法的区别是接受第一个参数不是self,而是cls（当时类的具体类型）
+* @property: 表示可以直接使用类实例直接访问的信息
