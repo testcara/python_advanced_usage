@@ -1,15 +1,20 @@
 ## 容器与collections模块
+
 ### python中的对象类型
 * 基本数据类型：Numbers, String, bool, None
 * 复合数据类型：类，函数, enum
 * 容器：list, set, tuple, dict
 
 ### 容器和collections模块
+
 在python中，在某些对象中包含了对其他对象的引用，这样的对象被称为容器。
 除了以上我们列出的四种标准容器外，我们还可以使用collections使用特定目标容器，
 作为标准容器对象的替代方案。我们来对collections模块提供的几个数据类型来进行学习。
+
 * namedtuple
+
 	生成一个类似于字典的有键值对组成的不可变的对象。
+
 	```
 	In [1]: from collections import namedtuple
 
@@ -33,10 +38,13 @@
 	Out[10]: 'dog
 	```
 	Line 2生成了一个不可辨的类似于字典的对象。
+
 * double-ended queue
+
 	双端队列，可以从两端实现插入和移除。我们在处理列表时，其时间复杂度为o(n)，也就时说随着元素的增加，其时间复杂度也是直线上升的。而实现双向队列，时间
 	复杂度为o(1)，当你的代码有这样的性能需求时，记得使用双端队列。现在让我们来
 	举例双端队列的应用。
+
 	```
 	In [1]: from collections import deque
 
@@ -74,8 +82,11 @@
 	In [14]: a_list
 	Out[14]: deque([1, 2, 3, 4])
 	```
+
 * OrderedDict
+
 	创建字典，并支持调整顺序。
+
 	```
 	In [99]: a = OrderedDict.fromkeys('cdea')
 
@@ -103,7 +114,9 @@
 	```
 
 * defaultDic
+
 	当我们用dict[]这种方式获取字典元素时，字典不存在该元素，则会报错。使用defaultDic定义该字典，则不会报错，而会返回我们默认值。
+
 	```
 	In [46]: from collections import defaultdict
 
@@ -127,7 +140,9 @@
 
 	```
 * Counter
+
 	用来统计字符串所有出现的字符的个数。
+
 	```
 	In [54]: from collections import Counter
 	    ...: 
@@ -170,7 +185,9 @@
 	Out[62]: 24
 	```
 * Chainmap
+
 	用来合并多个字典并输出，并不会影响到原有字典。
+
 	```
 	In [81]: maps = ChainMap(baseline, adjustments)
 
@@ -206,4 +223,5 @@
 	In [94]: len(d)
 	Out[94]: 4
 	```
+	
 还有UserList, UserDict, UserString这些对象，我们不在此讨论。
