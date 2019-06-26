@@ -119,7 +119,7 @@ asyncio.run(main())
 * asyncio.run() 执行协程函数
 * await等待协程执行完成。其实，await可以还可以等待任务和Future对象
 ### async/await实现并行的多协程
-如果我们只是用async和awati是可以实现协程的。多线程如下：
+如果我们只是用async和awati是可以实现协程的。多协程如下：
 ```
 import asyncio
 import time
@@ -143,7 +143,7 @@ started at 21:56:59
 [Sun Jun 23 21:57:04 2019] world
 finished at 21:57:04
 ```
-我们可以看到，其用了5是。如果我们为上例中的两个协程函数创建task, 则会如下：
+我们可以看到，其用了5s。如果我们为上例中的两个协程函数创建task, 则会如下：
 ```
 import asyncio
 import time
@@ -181,5 +181,6 @@ finished at 22:16:31
 * async/await：用于定义协程的关键字，async定义一个协程，await用于挂起阻塞的异步调用接口。
 
 协程中还有许多用法，我们将将一些关键链接放在这里：
-https://docs.python.org/zh-cn/3.7/library/asyncio-task.html#shielding-from-cancellation
-https://www.ibm.com/developerworks/cn/analytics/library/ba-on-demand-data-python-3/index.html
+* https://docs.python.org/zh-cn/3.7/library/asyncio-task.html#shielding-from-cancellation
+
+* https://www.ibm.com/developerworks/cn/analytics/library/ba-on-demand-data-python-3/index.html
